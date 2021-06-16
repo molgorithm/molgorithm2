@@ -37,7 +37,7 @@
 
 ### ✅ Code Convention
 
-✔ 변수와 함수 이름은 어떤 역할을 하는지 알 수 있도록 붙입니다. (a, b와 같은 단순 문자 지양, 파이썬의 경우 [PEP 8 스타일 가이드][https://www.python.org/dev/peps/pep-0008/] 준수 지향)
+✔ 변수와 함수 이름은 어떤 역할을 하는지 알 수 있도록 붙입니다. (a, b와 같은 단순 문자 지양, 파이썬의 경우 [PEP 8 스타일 가이드](https://www.python.org/dev/peps/pep-0008/) 준수 지향)
 
 **✔ code 마지막 줄에는 한 줄을 비웁니다. (git add + git commit 하기 전에 확인 해주세요 😊)** 
 
