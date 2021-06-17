@@ -47,7 +47,6 @@ README의 경우 다음 형식을 지향합니다.
 
 ```
 <h1> 문제 제목 </h1>
-[toc]
 문제 링크
 <h2> 1. 설계 로직 </h2>
 <h2> 2. 코드 </h2>
@@ -157,7 +156,7 @@ git commit -m "code: 자기이름 문제플랫폼 문제번호 문제이름"
    git checkout -b ID/feature/문제플랫폼-문제번호
    ```
 
-   ```
+   ```bash
    Jo@Jo-LAPTOP MINGW64 /c/documents/algorithms/boj/ (main)
    git checkout -b feature/boj-1000
    
@@ -166,7 +165,7 @@ git commit -m "code: 자기이름 문제플랫폼 문제번호 문제이름"
 
 2. 새로운 문제에 대한 code와 README.md에 대한 commit을 추가하고 push합니다. 이 때 반드시 터미널에서 브랜치 이름이 지정되어있는지 확인합니다.
 
-   ```
+   ```bash
    Jo@Jo-LAPTOP MINGW64 /c/documents/algorithms/boj/ (chul2/feature/boj-1000)
    git commit -m "code : boj 1000"
    
