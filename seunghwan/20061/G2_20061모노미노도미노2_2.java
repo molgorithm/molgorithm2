@@ -100,3 +100,4 @@ public class G2_20061모노미노도미노2_2 {
 		return num;
 	}
 }
+
