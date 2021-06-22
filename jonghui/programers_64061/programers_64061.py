@@ -8,7 +8,7 @@ def solution(board, moves):
     for move in moves:
         for line in board:
             if line[move-1] != 0:
-                if len(basket) and basket[-1] == line[move-1]:
+                if basket and basket[-1] == line[move-1]:
                     line[move-1] = 0
                     basket.pop()
                     answer += 2
