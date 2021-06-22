@@ -86,3 +86,4 @@ for _ in range(N):
     game()
 print(score)
 print(get_block())
+
