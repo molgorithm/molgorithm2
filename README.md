@@ -83,14 +83,14 @@ git commit -m "code: 본인영어이름 문제플랫폼 문제번호 문제이�
 
    ```
    git add boj1000.py
-   git commit -m "code: sky boj 1000"
+   git commit -m "code: sky boj 1000 A+B"
    ```
 
 2. 코드에 대한 설명을 작성한 문서를 하나의 커밋으로 분리합니다.
 
    ```
    git add README.md
-   git commit -m "docs: sky boj 1000"
+   git commit -m "docs: sky boj 1000 A+B"
    ```
 
 
@@ -106,7 +106,7 @@ git commit -m "code: 본인영어이름 문제플랫폼 문제번호 문제이�
 - Pull Request를 작성할 때 제목에는 "본인영어이름 문제플랫폼 문제번호 문제이름"을 작성하는 것을 지향합니다.
 
   ```
-  sky BOJ 1000 꿀단지를 찾아서
+  sky BOJ 1000 A+B
   ```
 
 ##### 🔖 메시지(내용)
@@ -140,7 +140,7 @@ git commit -m "code: 본인영어이름 문제플랫폼 문제번호 문제이�
    issue 제목에는 "본인영어이름 문제플랫폼 문제번호 문제이름"을 작성하는 것을 지향합니다.
 
    ```
-   sky BOJ 1000 꿀단지를 찾아서
+   sky BOJ 1000 A+B
    ```
 
 2. 자신이 작성했던 pull request에서 초록색 merge버튼을 눌러 merge합니다.
@@ -168,10 +168,10 @@ git commit -m "code: 본인영어이름 문제플랫폼 문제번호 문제이�
 
    ```bash
    Jo@Jo-LAPTOP MINGW64 /c/documents/algorithms/boj/ (sky/feature/boj-1000)
-   git commit -m "code: sky boj 1000"
+   git commit -m "code: sky boj 1000 A+B"
    
    Jo@Jo-LAPTOP MINGW64 /c/documents/algorithms/boj/ (sky/feature/boj-1000)
-   git commit -m "docs: sky boj 1000"
+   git commit -m "docs: sky boj 1000 A+B"
    
    Jo@Jo-LAPTOP MINGW64 /c/documents/algorithms/boj/ (sky/feature/boj-1000)
    git push
