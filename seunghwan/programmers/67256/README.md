@@ -1,6 +1,8 @@
 # 프로그래머스 64065 튜플
 
-[문제 링크]([https://programmers.co.kr/learn/courses/30/lessons/67256﻿](https://programmers.co.kr/learn/courses/30/lessons/67256))
+[문제 링크]([https://programmers.co.kr/learn/courses/30/lessons/67256﻿])
+
+
 
 ## 1. 설계 로직
 
