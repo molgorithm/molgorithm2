@@ -76,6 +76,4 @@ def solution(n, arr1, arr2):
 
 https://kkamikoon.tistory.com/136
 
-해당 블로그에서는 `rjust`, `zfill`에 대해서 설명해주는데, `zfill`은 예전에 써봤는데, `rjust`는 아예 처음봄.
-
-풀이 보고 감탄
+해당 블로그에서는 `rjust`, `zfill`에 대해서 설명해주는데, `zfill`은 예전에 써봤는데, `rjust`는 아예 처음봐서 풀이 보고 감탄했습니다 ~!
