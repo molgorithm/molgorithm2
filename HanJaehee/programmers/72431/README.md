@@ -1,4 +1,4 @@
-# 프로그래머스 72411 메뉴 리뉴얼
+# 프로그래머스 72431 합승 택시 요금
 
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72413)
 
