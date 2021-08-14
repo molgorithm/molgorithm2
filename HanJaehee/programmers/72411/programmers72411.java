@@ -46,8 +46,7 @@ class Solution {
             }
             String key = sb.toString();
             
-            if(map.containsKey(key)) map.put(key, map.get(key)+1);
-            else map.put(key, 1);
+map.merge(key, 1, Integer::sum);
             
             return;
         }
