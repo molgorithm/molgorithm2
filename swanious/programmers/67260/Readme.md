@@ -18,6 +18,49 @@
 ## 2. 코드
 
 ```javascript
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+  }
+  push(val) {
+    const newNode = new Node(val);
+    // 비었으면 head/tail 모두 newNode
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.size++;
+  }
+  pop() {
+    // 비었으면 null반환
+    if (!this.head) return null;
+    const temp = this.head;
+
+    // 값이 1개 존재하면 tail = null
+    if (this.head === this.tail) {
+      this.tail = null;
+    }
+
+    this.head = this.head.next;
+
+    this.size--;
+    return temp.val;
+  }
+  isEmpty = () => this.size === 0;
+}
+
 function solution(n, path, order) {
   const adj = Array.from(Array(n), () => []);
   const visited = new Array(n).fill(false);
@@ -39,11 +82,11 @@ function solution(n, path, order) {
   if (beforePath[0] !== undefined) return false;
 
   // bfs
-  const q = [0];
+  const q = new Queue();
   visited[0] = true;
-
-  while (q.length > 0) {
-    const curNode = q.shift();
+  q.push(0);
+  while (!q.isEmpty()) {
+    const curNode = q.pop();
     for (let nextNode of adj[curNode]) {
       const mustVisitBefore = beforePath[nextNode]; // 먼저 가야할 노드
       const mustVisitAfter = closedNode.get(nextNode); // 이후 가야할 노드
