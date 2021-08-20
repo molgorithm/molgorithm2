@@ -1,4 +1,4 @@
-# 프로그래머스 67256 키패드 누르기
+# 프로그래머스 67260 동굴탐험
 
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67260)
 
