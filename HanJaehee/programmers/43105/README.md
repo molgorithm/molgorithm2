@@ -1,4 +1,4 @@
-# 프로그래머스 43105 크레인 인형뽑기 게임
+# 프로그래머스 43105 정수 삼각형
 
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43105)
 
