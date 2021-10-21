@@ -36,11 +36,9 @@ public class 가장가까운공통조상 {
         }
     }
 
-    static Queue<Integer> q = new LinkedList<>();
     static Set<Integer> parentSet = new HashSet<>();
 
     public static int getCommonParent(int one, int two){
-        q.clear();
         parentSet.clear();
 
         getParent(one);
@@ -50,17 +48,15 @@ public class 가장가까운공통조상 {
     public static int getParent(int son){
         if(!parentSet.add(son))
             return son;
-        q.add(son);
-        while(!q.isEmpty()){
-            int tmp = q.poll();
-            int parent = tree[tmp][0];
+        while(true){
+            int parent = tree[son][0];
 
             if(parent == 0) break;
             else{
                 if(!parentSet.add(parent))
                     return parent;
                 else
-                    q.add(parent);
+                    son = parent;
             }
         }
         return -1;
