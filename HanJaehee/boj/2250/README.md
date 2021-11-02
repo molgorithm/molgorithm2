@@ -23,25 +23,17 @@ import java.util.List;
 public class 트리의너비와높이 {
 
     static class Node {
-        int num;
-        int level;
-        int idx;
         Node left;
         Node right;
-
-        Node(int num) {
-            this.num = num;
-        }
     }
 
     static class Tree {
         void inOrder(Node cur, int level) {
             if (cur != null) {
                 if (cur.left != null) inOrder(cur.left, level + 1);
-                cur.idx = idx++;
-                cur.level = level;
-                min_idx[level] = Math.min(min_idx[level], cur.idx);
-                max_idx[level] = Math.max(max_idx[level], cur.idx);
+                int curIdx = idx++;
+                min_idx[level] = Math.min(min_idx[level], curIdx);
+                max_idx[level] = Math.max(max_idx[level], curIdx);
                 if (cur.right != null) inOrder(cur.right, level + 1);
             }
         }
@@ -60,7 +52,7 @@ public class 트리의너비와높이 {
 
         int root = N * (N + 1) / 2;
         for (int i = 0; i <= N; i++){
-            nodeList.add(new Node(i));
+            nodeList.add(new Node());
             min_idx[i] = Integer.MAX_VALUE;
         }
 
@@ -95,8 +87,11 @@ public class 트리의너비와높이 {
         }
 
         System.out.println(maxLevel + " " + maxLength);
+
+
     }
 }
+
 
 ```
 
