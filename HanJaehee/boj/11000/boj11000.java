@@ -1,74 +1,38 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
 
-public class 생태학1 {
+public class 강의실배정 {
 
-    static int total = 0;
-    static final int MAX_LEN = 128;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        int N = Integer.parseInt(br.readLine());
 
-        Trie trie = new Trie();
-        String name;
-        while(true) {
-            name = br.readLine();
-            if (name == null || name.isEmpty()) break;
-            trie.insert(name);
-            total++;
+        int[][] subjects = new int[N][2];
+
+        for(int i=0; i<N; i++){
+            st = new StringTokenizer(br.readLine());
+            subjects[i][0] = Integer.parseInt(st.nextToken());
+            subjects[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        System.out.println(trie.start());
-    }
+        Arrays.sort(subjects, (o1, o2)-> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
 
-    static class Node{
-        int cnt;
-        Node[] next;
-        boolean isEnd;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.offer(subjects[0][1]);
 
-        Node(){
-            this.next = new Node[MAX_LEN];
-            this.isEnd = false;
-            this.cnt = 0;
-        }
-    }
-
-    static class Trie{
-        Node head = new Node();
-        StringBuilder sb = new StringBuilder();
-
-        void insert(String str){
-            Node cur = head;
-
-            for(int i=0; i<str.length(); i++){
-                int idx = str.charAt(i);
-
-                if(cur.next[idx] == null)
-                    cur.next[idx] = new Node();
-                cur = cur.next[idx];
+        for(int i=1; i<N; i++){
+            if(!pq.isEmpty() && pq.peek() <=subjects[i][0]){
+                pq.poll();
             }
 
-            cur.cnt++;
-            cur.isEnd = true;
+            pq.offer(subjects[i][1]);
         }
 
-        String start(){
-            search(head, "");
-            return sb.toString();
-        }
-
-        void search(Node cur, String now){
-            if(cur.isEnd){
-                sb
-                        .append(now)
-                        .append(String.format(" %.4f", cur.cnt*100.0/total))
-                        .append("\n");
-            }
-
-            for(int i=0; i<MAX_LEN; i++){
-                if(cur.next[i] == null) continue;
-                search(cur.next[i], now + (char)i);
-            }
-        }
+        System.out.println(pq.size());
     }
 }
