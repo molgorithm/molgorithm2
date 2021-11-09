@@ -1,4 +1,4 @@
-# 백준 1000 A+B
+# 백준 9084 동전
 
 [문제 링크](https://www.acmicpc.net/problem/9084)
 
